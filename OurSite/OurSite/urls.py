@@ -23,6 +23,7 @@ from personal.views import (
 from account.views import (
     registration_view,
     logout_view,
+    login_view,
 )
 
 urlpatterns = [
@@ -30,8 +31,10 @@ urlpatterns = [
     path('', home_screen_view, name="home"),
     path('register/', registration_view, name="register"),
     path('logout/', logout_view, name="logout"),
+    path('login/', login_view, name="login"),
 ]
 
-# home_screen_view este numele din views.py
+
+# home_screen_view este numele din personal/views.py
 # name="home" este optional
 
