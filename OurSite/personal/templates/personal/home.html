@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>
+        Registered Users
+    </h3>
+
+    {% for account in accounts %}
+       <p>{{account.username}} | {{account.date_joined}}</p>
+    {% endfor %}
+
+</div>
+
+
+
+{% endblock content %}
