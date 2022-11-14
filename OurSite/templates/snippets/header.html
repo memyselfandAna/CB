@@ -1,45 +1,57 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <style type="text/css">
-        body{
-         background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+        .d-flex{
+            background-image: linear-gradient(to bottom, #2192FF, #38E5ff, #9FFc, pink);
         }
-        
         .container {
             max-width: 960px;
         }
 
-        .pricing-header {
-            max-width: 700px;
-        }
-
         a {
             text-decoration: none;
-
         }
+        .search-bar{
+            max-width: 500px;
+            width: 100%;
+        }
+        form{
+            width: 100%;
+        }
+
     </style>
 
-<!-- header  -->
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-mb-4 mb-3 border-bottom shadow-sm">
-        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-          <span class="fs-4">
-            {% if request.user.is_authenticated %}
-            <p>Hello, {{request.user.username}}</p>
-            {% endif %}
-          </span>
-        </a>
-  
-        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-            {% if request.user.is_authenticated %}
-                <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
-                <a class="p-2 text-dark" href="{% url 'account' %}">Account</a>
-                <a class="p-2 text-dark" href="{% url 'logout' %}">Log out</a>
-            {% else %}
-                <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
-                <a class="p-2 text-dark" href="{% url 'login' %}">Login</a>
-                <a class="btn btn-outline-dark" href="{% url 'register' %}">Register</a>
-            {% endif %}
-        </nav>
+<!-- HEADER -->
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">
+        {% if request.user.is_authenticated %}
+            <p class="m-auto">Hello, {{request.user.username}}</p>
+        {% endif %}
+    </h5>
+    <div class="search-bar mt-sm-2 mr-2">
+        <form method="get">
+            <input class="form-control"  type="text" name="q" id="id_q" placeholder="Search...">
+        </form>
     </div>
-<!-- end header -->
+    <nav class="my-2 my-md-0 mr-md-3">
+        {% if request.user.is_authenticated %}
+            <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
+            <a class="p-2 text-dark" href="{% url 'account' %}">Account</a>
+            <a class="p-2 text-dark" href="{% url 'logout' %}">Logout</a>
+        {% else %}
+            <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
+            <a class="p-2 text-dark" href="{% url 'login' %}">Login</a>
+            <a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a>
+        {% endif %}	
+      
+    </nav>
+</div>
+
+<script type="text/javascript">
+	document.getElementById("id_q").value = "{{query}}"
+</script>
+  
+  
+<!-- END HEADER -->
