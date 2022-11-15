@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'personal',
     'account',
     'blog',
+    'ckeditor',
 
     #django apps
     'django.contrib.admin',

@@ -14,30 +14,49 @@
   	.submit-button{
   		max-width: 200px;
   	}
+	#cke_id_body{
+		border:3px solid rgba(81, 191, 246, 0.921) ;
+		margin: 0 auto;
+		border-radius: 1%;
+	}
+	.cke_top {
+		background-image:linear-gradient(to bottom, #2192FF, #38E5ff, #9FFc); 
+		max-width: 100%;
+	}
+	.cke_bottom{
+		background-image:linear-gradient(to top, #2192FF, #38E5ff, #9FFc); 
+	}
+
+	  @media (max-width:900px)
+	{
+		#cke_id_body{
+			border: 3px solid rgb(51, 179, 243) ;
+			max-width: 84vw !important;
+			margin: 0 auto;
+		}
+		.cke_top {
+			background-image:linear-gradient(to bottom, #2192FF, #38E5ff, #9FFc); 
+			max-width: 100%;
+		}
+	}
+	
+	.cke_inner .cke_reset_all .cke_reset{
+		width:1000vw ;
+	}
 </style>
 
 <div class="container">
 	<div class="row">
 		<div class="col-lg-7 offset-lg-1">
-			<form class="create-form" method="post" enctype="multipart/form-data">{% csrf_token %}
-
-				<!-- title -->
+			<form class="create-form" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
 				<div class="form-group">
-					<label for="id_title">Title</label>
-					<input class="form-control" type="text" name="title" id="id_title" placeholder="Title" required autofocus>
-				</div>
-
-				<!-- Body -->
-				<div class="form-group">
-					<label for="id_body">Content</label>
-					<textarea class="form-control" rows="10" type="text" name="body" id="id_body" placeholder="This blog is about..." required></textarea>
-				</div>
-
-				<!-- Image -->
-				<div class="form-group">
-					<label for="id_image">Image</label>
-					<input  type="file" name="image" id="id_image" accept="image/*" required>
-				</div>
+					
+						
+						{{ form.media }}
+					    {{ form.as_p }}
+				
+				</div> 
 
 				<!-- Submit btn -->
 				<button class="submit-button btn btn-lg btn-primary btn-block" type="submit">POST</button>
