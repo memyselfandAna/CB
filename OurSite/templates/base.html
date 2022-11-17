@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Base </title>
+    <!-- <meta http-equiv="refresh" content="15"> -->
+
+    <title>Base</title>
+
 
     {% include 'snippets/header.html' %}
     {% include 'snippets/base_css.html' %}
@@ -13,13 +16,13 @@
 <body>
     <!-- <h2>base.html <br> Aici este Body</h5> -->
         <!-- body -->
-        <style type="text/css">
-            .main{
-                min-height: 100vh;
-                height: 100%;
-            }
+    <style type="text/css">
+        .main{
+            min-height: 100vh;
+            height: 100%;
+        }
 
-        </style>
+    </style>
     <div class="main">
         {% block content %}
         

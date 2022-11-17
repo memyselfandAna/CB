@@ -44,10 +44,10 @@ def edit_blog_view(request, slug):
 		return redirect('must_authenticate')
 
 	blog_post = get_object_or_404(BlogPost, slug=slug)
+
 	if blog_post.author != user:
 		return HttpResponse("You are not the author of that post.")
-		
-	
+
 	if request.POST:
 		form = UpdateBlogPostForm(request.POST or None, request.FILES or None, instance=blog_post)
 		if form.is_valid():
@@ -64,7 +64,6 @@ def edit_blog_view(request, slug):
 				}
 			)
 	context['form'] = form
-
 
 	return render(request, 'blog/edit_blog.html', context)
 
