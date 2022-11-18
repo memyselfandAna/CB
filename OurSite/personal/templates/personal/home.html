@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
 <style type="text/css">
 
 	@media (max-width: 768px) { 
@@ -36,6 +37,7 @@
 		font-size: 17px;
 	}
 </style>
+
 <div class="container">
 	<div class="row">
 
@@ -66,8 +68,9 @@
 				</div>
 			{% endif %}
 			<!-- End Blog posts-->
-			<!-- paggination -->
+		<!-- Pagination -->
 			{% include 'blog/snippets/blog_post_pagination.html' with blog_post=blog_post %}
+
 		</div>
 		<!-- end blog feed -->
 

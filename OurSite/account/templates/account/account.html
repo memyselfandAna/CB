@@ -5,6 +5,7 @@
 
 
 <style type="text/css">
+  
     .form-signin {
     width: 100%;
     max-width: 330px;
@@ -40,18 +41,21 @@
       width: 100%;
       margin: auto;
     }
-    .password{
+    .ana{
       text-align: center;
     }
-    .list-group-item:hover {
+
+    .list-group-item:hover{
       border: 2px solid aqua !important;
     }
+
   </style>
   
   
   <form class="form-signin" method="post">{% csrf_token %}
+
     <div class="d-flex flex-column pb-3">
-      <img class="img-fluid mx-auto d-block" src="{% static 'logo.png' %}" alt="logo" width="200" height="200"> 
+      <img class="img-fluid mx-auto d-block" src="{% static 'logo.png' %}" alt="logo" width="200" height="200">
     </div>
   
     <h1 class="h3 mb-3 font-weight-normal">Account</h1>
@@ -83,28 +87,29 @@
     <button class="btn btn-lg btn-info btn-block" type="submit">Save changes</button>
   
   </form>
-  
-    <div class="password">
-        <a class="m-auto" href="{% url 'password_change' %}">Change Password</a>
+
+  <div class=" ana">
+    <a class="m-auto" href="{% url 'password_change' %}">Change Password</a>
+  </div>
+
+<div class="container mt-4 p-4">
+  <div class="row">
+    <div class="blog-posts">
+      <h3 class="mb-3 font-weight-normal ml-3 pl-3">Blog posts:</h3>
+      {% if blog_posts %}
+      <ul>
+        {% for post in blog_posts %}
+        <a href="{% url 'blog:detail' post.slug %}" style="text-decoration: none;">
+          <li class="list-group-item mb-1 mt-1 border border-info">{{post}}</li>
+        </a>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>You have no blog posts. Create a post <a href="{% url 'blog:create' %}">here</a>.</p>
+      {% endif%}
     </div>
-  
-   <div class="container mp-4 p-4">
-    <div class="row">
-      <div class="blog-posts">
-        <h3 class="mb-3 ml-3 pl-3 font-weight-normal">Blog Posts:</h3>
-        {% if blog_posts %}
-        <ul>
-          {% for post in blog_posts %}
-          <a href="{% url 'blog:detail' post.slug %}" style="text-decoration: none;">
-            <li class="list-group-item mb-1 mt-1 border border-info">{{post}}</li>
-          </a>
-          {% endfor %} 
-        </ul>
-        {% else %}
-        <p>You have no blog post. Create a post <a href="{% url 'blog:create' %}">Here</a>.</p>
-        {% endif %}
-      </div>
-    </div>
-   </div> 
+  </div>
+</div>
+
 
 {% endblock %}
