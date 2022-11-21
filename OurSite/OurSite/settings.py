@@ -166,6 +166,9 @@ CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
         # 'skin': 'office2013',
+        'font_names': 'Casandra Personal Use;sans serif;monospace;cursive',
+        'contentsCss': ['https://fonts.cdnfonts.com/css/cassandra-personal-use'],
+        
         'toolbar_Basic': [
             ['Source', '-', 'Bold', 'Italic']
         ],
@@ -180,7 +183,7 @@ CKEDITOR_CONFIGS = {
             {'name': 'document', 'items': ['Print']},
             '/',
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
-            {'name': 'styles', 'items': ['Format', 'Font', 'FontSize']},
+            {'name': 'styles', 'items': ['Format', 'FontSize']},
             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
             {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
             
@@ -189,6 +192,7 @@ CKEDITOR_CONFIGS = {
 
             ]},
         ],
+        
         'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
         # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
         # 'height': 291,

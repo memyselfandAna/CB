@@ -6,6 +6,7 @@ __pycache__
 **/__pycache__
 db.sqlite3
 media
+pycache
 
 # Backup files # 
 *.bak 
@@ -136,3 +137,35 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+OurSite/blog/migrations/__pycache__/0001_initial.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0002_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0003_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0004_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0001_initial.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0002_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0003_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0004_alter_blogpost_title.cpython-310.pyc
+OurSite/account/__pycache__/forms.cpython-310.pyc
+OurSite/account/__pycache__/models.cpython-310.pyc
+OurSite/account/__pycache__/views.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0001_initial.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0002_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0003_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0004_alter_blogpost_title.cpython-310.pyc
+OurSite/db.sqlite3
+OurSite/OurSite/__pycache__/settings.cpython-310.pyc
+OurSite/OurSite/__pycache__/urls.cpython-310.pyc
+OurSite/templates/snippets/base_css.html
+OurSite/account/__pycache__/forms.cpython-310.pyc
+OurSite/account/__pycache__/models.cpython-310.pyc
+OurSite/account/__pycache__/views.cpython-310.pyc
+OurSite/account/__pycache__/forms.cpython-310.pyc
+OurSite/blog/__pycache__/admin.cpython-310.pyc
+OurSite/blog/__pycache__/models.cpython-310.pyc
+OurSite/blog/__pycache__/views.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0001_initial.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0002_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0003_alter_blogpost_title.cpython-310.pyc
+OurSite/blog/migrations/__pycache__/0004_alter_blogpost_title.cpython-310.pyc
+OurSite/OurSite/__pycache__/settings.cpython-310.pyc
+OurSite/OurSite/__pycache__/urls.cpython-310.pyc
