@@ -2,57 +2,50 @@
 
 
 {% block content %}
+<!-- CREATE_BLOG.HTML -->
 
 <style type="text/css">
+
 	.create-form {
-		  width: 100%;
-		  max-width: 100%;
-		  padding: 15px;
-		  margin: auto;
-		  
-		}
+		width: 100%;
+		max-width: 100%;
+		padding: 15px;
+		margin: auto;
+	}
   
 	.submit-button{
 		max-width: 200px;
 	}
+
 	#cke_id_body{
 		border: 3px solid rgb(51, 179, 243) ;
 		margin: 0 auto;
 		border-radius: 1%;
-		max-width: 700px;
-
-	/* @font-face{
-		font-family:cassandra personal use;
-		font-style:normal;
-		font-weight:400;
-		} */
 	}
-	
+
 	.cke_top {
 		background-image:linear-gradient(to bottom, #2192FF, #38E5ff, #9FFc); 
 		max-width: 100%;
 		border-radius: 1%;
 	}
-  
-		@media (max-width:900px)
-	  {
-		  #cke_id_body{
-			  border: 3px solid rgb(51, 179, 243) ;
+
+	.cke_inner .cke_reset_all .cke_reset{
+		width:1000vw;
+	}
+
+	@media (max-width:900px) {
+	
+		#cke_id_body{
+			  border: 3px solid rgb(51, 179, 243);
 			  max-width: 84vw !important;
 			  margin: 0 auto;
-		  }
-		  .cke_top {
+		}
+		.cke_top {
 			  background-image:linear-gradient(to bottom, #2192FF, #38E5ff, #9FFc); 
 			  max-width: 100%;
-		  }
-	  }
+		}
+	}
 	  
-	  .cke_inner .cke_reset_all .cke_reset{
-		  width:1000vw ;
-	  }
-	
-
-	
   </style>
 
 <div class="container">
@@ -60,16 +53,15 @@
 		<div class="col-lg-7 offset-lg-1">
 			<form class="create-form" method="post" enctype="multipart/form-data">
 				{% csrf_token %}
-				<!-- un nou -->
+				
 				<div class="form-group">
-					
+						
 					{{ form.media }}
-
 					{{ form.as_p }}
-				</div>
 					
+				</div> 
 				<!-- Submit btn -->
-				<button class="submit-button btn btn-lg btn-primary btn-block" type="submit">POST</button>
+				<button class="submit-button btn btn-lg btn-info btn-block" type="submit">POST</button>
 			</form>	
 		</div>
 	</div>

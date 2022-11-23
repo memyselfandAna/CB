@@ -1,10 +1,25 @@
+<!-- BLOG_POST_SNIPPET.HTML -->
 <style type="text/css">
 	
-    .card{
+    .card {
 		max-width: 700px;
         background: rgba(240, 199, 200);
 	}
-	.card-body{
+
+	.card2 {
+        background: rgba(240, 199, 200);
+		width: 18rem;
+		border: 1px solid rgba(0, 0, 0, .100);
+	}
+	
+	.condimente-btn {
+		max-width: 700px;
+        background: rgba(240, 199, 200);
+		border-color: transparent;
+	}
+
+	
+	.card-body {
 		padding: 20px;
         width: 100%;
 	}
@@ -27,8 +42,8 @@
 				</a>
 				<p class="card-text">{{blog_post.body|safe|truncatechars:180}}</p>
 				{% if blog_post.author == request.user %}
-					<a href="{% url 'blog:edit' blog_post.slug %}" class="btn btn-primary">Update</a>
-					<a href="{% url 'blog:delete' blog_post.slug %}" class="btn btn-warning">Delete</a>
+					<a href="{% url 'blog:edit' blog_post.slug %}" class="btn btn-primary">Edit</a>
+					<a href="{% url 'blog:delete' blog_post.slug %}" class="btn btn-danger">Delete</a>
 				{% endif %}
 			</div>
 			<div class="card-footer text-muted">

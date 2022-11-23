@@ -40,11 +40,7 @@ urlpatterns = [
     path('login/', login_view, name="login"),
     path('must_authenticate/', must_authenticate_view, name="must_authenticate"),
     path('account/', account_view, name="account"),
-
-    # home_screen_view este numele din personal/views.py
-    # name="home" este optional
-
-    # Password reset links (ref: https://github.com/django/django/blob/master/django/contrib/auth/views.py)
+    # path('ckeditor', include('ckeditor_uploader.urls')),
 
     path('password_change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), 
         name='password_change_done'),
@@ -61,7 +57,8 @@ urlpatterns = [
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
      name='password_reset_complete'),
 
-]
+] 
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

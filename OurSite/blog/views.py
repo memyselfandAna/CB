@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRedirect
 from django.db.models import Q
 from django.http import HttpResponse
 from blog.models import BlogPost
@@ -67,24 +67,37 @@ def edit_blog_view(request, slug):
 
 	return render(request, 'blog/edit_blog.html', context)
 
-def delete_blog_view(request, slug):
+# def delete_blog_view(request, slug):
     	
-	context = {}
-	user = request.user
-	if not user.is_authenticated:
-		return redirect('must_authenticate')
+# 	context = {}
+# 	user = request.user
+# 	if not user.is_authenticated:
+# 		return redirect('must_authenticate')
 
-	blog_post = get_object_or_404(BlogPost, slug=slug)
+# 	blog_post = get_object_or_404(BlogPost, slug=slug)
 
-	if blog_post.author != user:
-		return HttpResponse("You are not the author of that post.")
+# 	if blog_post.author != user:
+# 		return HttpResponse("You are not the author of that post.")
 
-	if request.method == 'GET':
-		blog_post.delete()
-		context['success_message'] = "Deleted"
+# 	if request.method == 'GET':
+# 		blog_post.delete()
+# 		context['success_message'] = "Deleted"
 	
-	return render(request, 'blog/delete_blog.html', context)
+# 	return render(request, 'blog/delete_blog.html', context)
 	
+
+def delete_blog_view(request, slug):
+    
+    context ={}
+ 
+    obj = get_object_or_404(BlogPost, slug = slug)
+ 
+    if request.method =="POST":
+        obj.delete()
+        return HttpResponseRedirect("/")
+ 
+    return render(request, 'blog/delete_blog.html', context)
+
 def get_blog_queryset(query=None):
 	queryset = []
 	queries = query.split(" ")

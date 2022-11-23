@@ -2,58 +2,140 @@
 {% load static %}
 
 {% block content %}
+<!-- HOME.HTML -->
 
 <style type="text/css">
 
 	@media (max-width: 768px) { 
+		
 		.right-column{
 			margin-left: 0px;
+		}
+
+		span .btn {
+			display: inline-flex;
+			align-items: center;
+			min-width: 100px !important;
+			max-width: 100px !important;
+			text-align: center;	
 		}
 	}
 
 	@media (min-width: 768px) { 
+		
 		.right-column{
 			margin-left: 20px;
 		}
+		
 	}
 
-	.blog-post-container{
+	.blog-post-container {
 		margin-bottom: 20px;
 		width: 100%;
 	}
-	.create-post-bar{
+
+	.create-post-bar {
 		background-color: #fff;
 		margin-bottom:20px;
 	}
 
-	.left-column{
+	.left-column {
 		padding:0px;
 	}
 
-	.right-column{
+	.right-column {
 		padding:0px;
 	}
-	.lead{
-		font-size: 17px;
+
+	.lead2 {
+		font-size: xx-large;
+		text-align: center;
+		padding: 3px;
 	}
+
+	.lead {
+		font-size: xx-large;
+	}
+
+	/* .container {
+		min-width:max-content;
+	} */
+	
+	span .btn:hover {
+    background: #03e9f4;
+    color: rgba(240,199, 200, 0.958); 
+	border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  	}
+	.box h4{
+		writing-mode: vertical-lr;
+		text-orientation: upright;
+		font-size: 1rem;
+		letter-spacing: 0.1em;
+		color: black;
+		text-transform: uppercase;
+	}
+	/* span .btn {
+		display: inline-flex;
+		min-width: 8vw !important;
+		max-width: 8vw !important;
+	} */
+
 </style>
 
 <div class="container">
 	<div class="row">
+		
+		<!-- Meniu Stanga -->
+		<div class="right-column col-2 pr-3 d-lg-flex d-none flex-column">
+			<div class="card condimente-btn flex-column p-1">
+				<div class="box">
+					<h4 class="lead2">Alege condimentele pentru:</h4>
+			    </div>
+				<span class="m-auto"><a class="btn btn-info" href="/">Legume</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Fructe</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Pui</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Porc</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Vita</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Peste</a></span>
+			</div>
+		</div>
+		<!-- end Meniu Stanga -->
+
+		<!-- Meniu Stanga Media -->
+	
+		<div class="d-lg-none mb-3 mr-3 left-column col-lg-7">
+			<div class="card condimente-btn m-auto d-flex flex-column p-3">
+				<span>
+				<p class="lead2">Alege condimentele pentru:</p>
+				<span class="m-auto"><a class="btn btn-info" href="/">Legume</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Fructe</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Pui</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Porc</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Vita</a></span>
+				<span class="m-auto"><a class="btn btn-info" href="/">Peste</a></span>
+				</span>
+			</div>
+		</div>
+
+		<!-- end Meniu Stanga Media -->
 
 		<!-- blog feed -->
-		<div class="left-column col-lg-7 offset-lg-1">
+		<div class="left-column col-lg-7 ">
 
-			<!-- Top 'create post' bar -->
+			<!--Media size 'create post'-->
 			<div class="d-lg-none mb-3">
 				<div class="card m-auto d-flex flex-column p-3">
 					<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="72" height="72">
-					<p class="lead">In this course you'll learn how to build a simple blog with user registration and blog CRUD functionality. Django is a powerful 
-	  					framework and you'll see why in this course.</p>
-					<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Create post</a></p>
+					<p class="lead">Acest blog s-a nascut din dorinta de a impartasii experientele noastre culinare cu cei care, asemeni noua se simt mereu incepatori in bucatarie. <br> Fiecare incepator are cel putin o reteta realizata cu succes, aici este locul unde poti impartasii marele tau mic succes.</p>
+					<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Scrie reteta ta</a></p>
 				</div>
 			</div>
-			<!-- end Top 'create post' bar -->
+			<!-- end Media 'create post'-->
 
 			<!-- Blog posts-->
 			{% if blog_posts %}
@@ -68,26 +150,20 @@
 				</div>
 			{% endif %}
 			<!-- End Blog posts-->
-		<!-- Pagination -->
+			<!-- Pagination -->
 			{% include 'blog/snippets/blog_post_pagination.html' with blog_post=blog_post %}
-
 		</div>
 		<!-- end blog feed -->
 
-
 		<!-- Right 'create post' column  -->
-		<div class="right-column col-lg-3 d-lg-flex d-none flex-column">
-
-			<div class="card create-post-bar d-flex flex-column p-3">
-				<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="172" height="172">
-				<p class="lead">In this course you'll learn how to build a simple blog with user registration and blog CRUD functionality. Django is a powerful 
-  					framework and you'll see why in this course.</p>
-				<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Create post</a></p>
+			<div class="right-column col-lg-2 d-lg-flex d-none flex-column">
+				<div class="card2 create-post-bar d-flex flex-column p-3">
+					<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="172" height="172">
+					<p class="lead">&ensp;Acest blog s-a nascut din dorinta de a impartasii experientele noastre culinare cu cei care, asemeni noua se simt mereu incepatori in bucatarie. <br> &ensp;Fiecare incepator are cel putin o reteta realizata cu succes, aici este locul unde poti impartasii marele tau mic succes.</p>
+					<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Scrie reteta ta</a></p>
+				</div>
 			</div>
-		
-		</div>
 		<!-- end Right 'create post' column  -->
-
 	</div>
 </div>
 
