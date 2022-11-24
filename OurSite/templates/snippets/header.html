@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <style type="text/css">
-         .d-flex{
+        .d-flex{
             background-image: linear-gradient(to bottom, #2192FF, #38E5ff, #9FFc, rgba(240,199, 200, 0.958));
         }
     
@@ -17,31 +17,38 @@
             width: 100%;
             align-self:center;
         }
+        .input #id_q .form-control{
+            background-image:  red!important;
+        }
         form{
             width: 100%;
         }
+        .form-control{
+            background-color: #EFEBD2;
+        }
         .p-2{
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align:center;
         }
         .header a:hover{
             text-decoration: none;
-            color: thistle!important;
+            color:antiquewhite!important;
         }
         .btn-outline-warning{
             font-weight: bold;
             font-size: 1.5rem;
             text-align: center;
         }
+       
     </style>
 
 <!-- HEADER -->
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-    <h5 class="my-0 mr-md-auto font-weight-normal">
+    <h3 class="my-0 mr-md-auto font-weight-normal">
         {% if request.user.is_authenticated %}
             <p class="m-auto">Hello, {{request.user.username}}</p>
         {% endif %}
-    </h5>
+    </h3>
     
     <nav class="header my-2 my-md-0 mr-md-3">
         {% if request.user.is_authenticated %}
