@@ -23,6 +23,8 @@
 	  backface-visibility: hidden;
 	}
 
+	
+
 	.middle {
 	  transition: .5s ease;
 	  opacity: 0;
@@ -53,6 +55,14 @@
 		color: white;
 		font-size: 15px;
 		padding: 15px;
+	}
+	.detail-blog-btn .btn{
+		display:inline;
+		max-width:25%;
+		
+	}
+	.detail-blog-btn{
+		align-self: center;
 	}
 
 </style>
@@ -103,8 +113,14 @@
 					</div>
 				{% endif %}
 
-				<!-- Submit btn -->
-				<button class="submit-button btn btn-lg btn-primary btn-block" type="submit">Save</button>
+				<!-- Submit $ Cencel btn -->
+				<center>
+				<span class="detail-blog-btn">
+					<button class="submit-button btn btn-lg btn-primary btn-block" type="submit">Save</button>
+					<a href="/">
+					<button disabled="disabled" class="submit-button btn btn-lg btn-secondary btn-block">Cancel</button>
+					</a>
+				</span></center>
 			</form>	
 		</div>
 	</div>

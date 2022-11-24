@@ -13,6 +13,10 @@
 	.container {
 		padding:20px;
 	}
+	.card-body {
+		font-family: 'Eufoniem', sans-serif;
+	}
+	
 	
 </style>
 
@@ -25,8 +29,9 @@
 			  <h2 class="card-title">{{blog_post.title}}</h2>
 			  <p class="card-text">{{blog_post.body|safe}}</p>
 			  {% if blog_post.author == request.user %}
-			  	<a href="{% url 'blog:edit' blog_post.slug %}" class="btn btn-primary">Save</a>
-				{% endif %}
+			  	<a href="{% url 'blog:edit' blog_post.slug %}" class="btn btn-primary">Edit</a>
+				<a href="{% url 'blog:delete' blog_post.slug %}" class="btn btn-danger">Delete</a>
+			{% endif %}
 			</div>
 			<div class="card-footer text-muted">
 			  Posted on {{blog_post.date_published}} by {{blog_post.author}}

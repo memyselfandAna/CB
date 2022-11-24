@@ -47,12 +47,6 @@
 		padding:0px;
 	}
 
-	.lead2 {
-		font-size: xx-large;
-		text-align: center;
-		padding: 3px;
-	}
-
 	.lead {
 		font-size: xx-large;
 	}
@@ -62,28 +56,40 @@
 	} */
 	
 	span .btn:hover {
-    background: #03e9f4;
-    color: rgba(240,199, 200, 0.958); 
+    background: #00f9f9;
+    color:#000064; 
 	border: none;
     border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
+    box-shadow: 0 0 5px #00f9f9,
                 0 0 25px #03e9f4,
                 0 0 50px #03e9f4,
                 0 0 100px #03e9f4;
   	}
+	span .btn{
+		margin: 10px 0 10px ;
+	}
+	.section{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
+	.box{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 20px;
+	}
 	.box h4{
 		writing-mode: vertical-lr;
 		text-orientation: upright;
 		font-size: 1rem;
-		letter-spacing: 0.1em;
-		color: black;
+		font-weight: bold;
+		/* letter-spacing: 0.1em; */
+		background-image: radial-gradient(closest-side, #38E5ff, #1feeff, rgba(18,150,211,0.9), rgba(18, 236, 236, 0.8));
+		font-family:'Courier New', Courier, monospace;
 		text-transform: uppercase;
 	}
-	/* span .btn {
-		display: inline-flex;
-		min-width: 8vw !important;
-		max-width: 8vw !important;
-	} */
 
 </style>
 
@@ -94,14 +100,16 @@
 		<div class="right-column col-2 pr-3 d-lg-flex d-none flex-column">
 			<div class="card condimente-btn flex-column p-1">
 				<div class="box">
-					<h4 class="lead2">Alege condimentele pentru:</h4>
-			    </div>
+					<h4 class="lead">Condimente pentru</h4>
+			    <div>
 				<span class="m-auto"><a class="btn btn-info" href="/">Legume</a></span>
 				<span class="m-auto"><a class="btn btn-info" href="/">Fructe</a></span>
 				<span class="m-auto"><a class="btn btn-info" href="/">Pui</a></span>
 				<span class="m-auto"><a class="btn btn-info" href="/">Porc</a></span>
 				<span class="m-auto"><a class="btn btn-info" href="/">Vita</a></span>
 				<span class="m-auto"><a class="btn btn-info" href="/">Peste</a></span>
+				</div>	
+			</div>
 			</div>
 		</div>
 		<!-- end Meniu Stanga -->
@@ -111,7 +119,7 @@
 		<div class="d-lg-none mb-3 mr-3 left-column col-lg-7">
 			<div class="card condimente-btn m-auto d-flex flex-column p-3">
 				<span>
-				<p class="lead2">Alege condimentele pentru:</p>
+				<p class="lead">Alege condimentele pentru:</p>
 				<span class="m-auto"><a class="btn btn-info" href="/">Legume</a></span>
 				<span class="m-auto"><a class="btn btn-info" href="/">Fructe</a></span>
 				<span class="m-auto"><a class="btn btn-info" href="/">Pui</a></span>
