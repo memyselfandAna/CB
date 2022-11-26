@@ -11,14 +11,6 @@
 		.right-column{
 			margin-left: 0px;
 		}
-
-		span .btn {
-			display: inline-flex;
-			align-items: center;
-			min-width: 100px !important;
-			max-width: 100px !important;
-			text-align: center;	
-		}
 	}
 
 	@media (min-width: 768px) { 
@@ -26,7 +18,6 @@
 		.right-column{
 			margin-left: 20px;
 		}
-		
 	}
 
 	.blog-post-container {
@@ -48,22 +39,17 @@
 	}
 
 	.lead {
-		font-size: xx-large;
+		font-size: xx-large;	
 	}
-
-	/* .container {
-		min-width:max-content;
-	} */
-	
 	span .btn:hover {
-    background: #00f9f9;
-    color:#000064; 
-	border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #00f9f9,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+		background: #03e9f4;
+		color: rgba(240,199, 200, 0.958); 
+		border: none;
+		border-radius: 5px;
+		box-shadow: 0 0 5px #03e9f4,
+					0 0 25px #03e9f4,
+					0 0 50px #03e9f4,
+					0 0 100px #03e9f4;
   	}
 	span .btn{
 		margin: 10px 0 10px ;
@@ -72,177 +58,594 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-height: 100vh;
+		min-height: border-box;
+		min-width: auto;
 	}
 	.box{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		padding: 0 20px;
+		margin-right: 40px;                     
 	}
 	.box h4{
 		writing-mode: vertical-lr;
 		text-orientation: upright;
 		font-size: 1rem;
-		color: #007BFF;
+		font-family: roboto;
+		text-transform: uppercase;
 		font-weight: bold;
 		/* letter-spacing: 0.1em; */
-		/* background-image: linear-gradient(to top, #38E5ff, #1feeff, rgba(18,150,211,0.9), rgba(18, 236, 236, 0.8)); */
-		font-family:'SPORTY VISTA', sans-serif;
+		font-family: 'SPORTY VISTA', sans-serif;
 	}
-	/* .box h4:hover{
 
-		text-transform: uppercase;
-	} */
+	.media-btn {
+		padding-left: 14vw;
+	}
+	.condimente-btn{
+		margin-right: 50%;
+		
+	}
 
+	.container2{
+		max-width: 45%;
+		align-self: baseline;
+	}
+	
 </style>
 
-<div class="container">
-	<div class="row">
-		
-		<!-- Meniu Stanga -->
-		<div class="right-column col-2 pr-3 d-lg-flex d-none flex-column">
-			<div class="card condimente-btn flex-column p-1">
-				<div class="box">
-					<h4 class="lead">CONTIMENTE PENTRU </h4>
-			    <div>
-				<span class="m-auto">
-				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-					Legume
-				  </button>
-				<!-- Modal -->
-				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exampleModalLabel">Condimente pentru legme</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-						<ol>
-							<li>Cimbru</li>
-							<li>Boian dulce<li>
-							<li>Boia afumata</li>
-							<li>Sare</li>
-							<li>Piper</li>
-							<li>Usturoi</li>
-							<li>Patrunjel</li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li>DadADdadadadadad</li>
-							<li><i class="fa fa-sign-in" aria-hidden="true"></i></li>
-						</ol>
-						</div>
-						<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						</div>
-					</div>
-					</div>
-				</div>
-				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-					Pui
-				  </button>
-				<!-- Modal -->
-				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exampleModalLabel">Pui</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body">
-						<ol>
-							<li>Cimbru</li>
-							<li>Sare<li>
-							<li>Boia afumata</li>
-							<li>Sare</li>
-							<li>Piper</li>
-							<li>Usturoi</li>
-							<li>Patrunjel</li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li>DadADdadadadadad</li>
-							<li><i class="fa fa-sign-in" aria-hidden="true"></i></li>
-						</ol>
-						</div>
-						<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						</div>
-					</div>
-					</div>
-				</div>
-				<a class="btn btn-info" href="/">Porc</a>
-				<a class="btn btn-info" href="/">Vita</a>
-				<a class="btn btn-info" href="/">Peste</a>
-				<a class="btn btn-info" href="/">Seafood</a></span>
+<section class="section">
+	<div class="container2">
+		<div class="card condimente-btn flex-column p-1">
+			<div class="box">
+				<h4 class="lead">Condimente pentru</h4>
+				<div class="display-btn">
+					<span>
 
+		<!-- Button-1 trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+						Legume
+					</button>	
+		<!-- Modal Button-1 -->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Condimente:</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+							<ol>
+								<li>Sare</li>
+								<li>Piper</li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						</div>
+					</div>	
+
+		<!-- Button-2 trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+						Carne de Pui
+					</button>				
+		<!-- Modal Button-2-->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Carne de Pui</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+							<ol>
+								<li>Sare</li>
+								<li>Piper</li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						</div>
+					</div>
+
+		<!-- Button-3 trigger modal -->
+					<button type="button" class="btn btn-primary mr-3" data-toggle="modal" data-target="#exampleModalCenter">
+						Carne de Porc
+					</button>
+		<!-- Modal Button-3-->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Carne de Porc</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+							<ol>
+								<li>Sare</li>
+								<li>Piper</li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						</div>
+					</div>
+
+		<!-- Button-4 trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+						Carne de Vita
+					</button>
+		<!-- Modal Button-4 -->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Carne de Vita</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+							<ol>
+								<li>Sare</li>
+								<li>Piper</li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						</div>
+					</div>
+
+		<!-- Button-5 trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+						Peste
+					</button>
+		<!-- Modal Button-5 -->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Peste</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+							<ol>
+								<li>Sare</li>
+								<li>Piper</li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						</div>
+					</div>
+
+		<!-- Button-6 trigger modal -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+						Fructe de mare
+					</button>
+		<!-- Modal Button-6 -->
+					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Fructe de mare</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+							<div class="modal-body">
+							<ol>
+								<li>Sare</li>
+								<li>Piper</li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ol>
+							</div>
+							<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						</div>
+					</div>
+					</span>
 				</div>	
-			</div>
-			</div>
+			</div>	
 		</div>
-		<!-- end Meniu Stanga -->
-
-		<!-- Meniu Stanga Media -->
-		<div class="d-lg-none mb-3 mr-3 left-column col-lg-7">
-			<div class="card condimente-btn m-auto d-flex flex-column p-3">
-				<span>
-				<p class="lead">Alege condimentele pentru:</p>
-				<span class="m-auto"><a class="btn btn-info" href="/">Legume</a></span>
-				<span class="m-auto"><a class="btn btn-info" href="/">Fructe</a></span>
-				<span class="m-auto"><a class="btn btn-info" href="/">Pui</a></span>
-				<span class="m-auto"><a class="btn btn-info" href="/">Porc</a></span>
-				<span class="m-auto"><a class="btn btn-info" href="/">Vita</a></span>
-				<span class="m-auto"><a class="btn btn-info" href="/">Peste</a></span>
-				</span>
-			</div>
-		</div>
-		<!-- end Meniu Stanga Media -->
-
-		<!-- blog feed -->
-		<div class="left-column col-lg-7 ">
-
-			<!--Media size 'create post'-->
-			<div class="d-lg-none mb-3">
-				<div class="card m-auto d-flex flex-column p-3">
-					<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="72" height="72">
-					<p class="lead">Acest blog s-a nascut din dorinta de a impartasii experientele noastre culinare cu cei care, asemeni noua se simt mereu incepatori in bucatarie. <br> Fiecare incepator are cel putin o reteta realizata cu succes, aici este locul unde poti impartasii marele tau mic succes.</p>
-					<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Scrie reteta ta</a></p>
-				</div>
-			</div>
-			<!-- end Media 'create post'-->
-
-			<!-- Blog posts-->
-			{% if blog_posts %}
-				{% for post in blog_posts %}
-					<div class="blog-post-container">
-						{% include 'blog/snippets/blog_post_snippet.html' with blog_post=post %}
-					</div>
-				{% endfor %}
-			{% else %}
-				<div class="blog-post-container">
-					{% include 'blog/snippets/blog_post_snippet.html' with query=query %}
-				</div>
-			{% endif %}
-			<!-- End Blog posts-->
-			<!-- Pagination -->
-			{% include 'blog/snippets/blog_post_pagination.html' with blog_post=blog_post %}
-		</div>
-		<!-- end blog feed -->
-
-		<!-- Right 'create post' column  -->
-			<div class="right-column col-lg-2 d-lg-flex d-none flex-column">
-				<div class="card2 create-post-bar d-flex flex-column p-3">
-					<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="172" height="172">
-					<p class="lead">&ensp;Acest blog s-a nascut din dorinta de a impartasii experientele noastre culinare cu cei care, asemeni noua se simt mereu incepatori in bucatarie. <br> &ensp;Fiecare incepator are cel putin o reteta realizata cu succes, aici este locul unde poti impartasii marele tau mic succes.</p>
-					<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Scrie reteta ta</a></p>
-				</div>
-			</div>
-		<!-- end Right 'create post' column  -->
 	</div>
-</div>
+
+	<div class="container">
+		<div class="row">	
+	<!-- Card Condimente -->	
+			<!-- <div class="right-column col-2 pr-3 d-lg-flex d-none flex-column">
+				
+			</div> -->
+	<!-- END Card Condimente -->
+
+	<!-- Card Condimente MEDIA -->
+			<div class="left-column d-lg-none mb-3 mr-3 col-lg-7">
+				<div class="card condimente-btn m-auto d-flex flex-column p-3">
+					
+					<p class="lead">Condimente pentru:</p>
+					<div class="media-btn">
+
+	<!-- Button-1 trigger modal MEDIA -->
+					<button type="button" class="btn btn-info mx-2" data-toggle="modal" data-target="#exampleModal">
+						Legume
+					</button> 
+	<!-- Modal Button-1 MEDIA -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h2 class="modal-title" id="exampleModalLabel">Condimente</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+								<div class="modal-body">
+									<ol>
+										<li>Sare</li>
+										<li>Piper</li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ol>
+								</div>
+								<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+							</div>
+						</div>
+
+	<!-- Button-2 trigger modal MEDIA -->
+						<button type="button" class="btn btn-info mx-2" data-toggle="modal" data-target="#exampleModal">
+							Carne de Pui
+						</button>		  
+	<!-- Modal Button-2 MEDIA -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+								<h2 class="modal-title" id="exampleModalLabel">Condimente</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<ol>
+									<li>Sare</li>
+									<li>Piper</li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ol>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+							</div>
+						</div>
+						</div>
+
+	<!-- Button-3 trigger modal MEDIA -->
+						<button type="button" class="btn btn-info mx-2" data-toggle="modal" data-target="#exampleModal">
+							Carne de Porc
+						</button>
+	<!-- Modal Button-3 MEDIA -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h2 class="modal-title" id="exampleModalLabel">Condimente</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+								<div class="modal-body">
+									<ol>
+										<li>Sare</li>
+										<li>Piper</li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ol>
+								</div>
+								<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+							</div>
+						</div>
+
+	<!-- Button-4 trigger modal MEDIA -->
+						<button type="button" class="btn btn-info mx-2" data-toggle="modal" data-target="#exampleModal">
+							Carne de Vita
+						</button>			
+	<!-- Modal Button-4 MEDIA -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+							<div class="modal-header">
+								<h2 class="modal-title" id="exampleModalLabel">Condimente</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<ol>
+									<li>Sare</li>
+									<li>Piper</li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ol>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+							</div>
+						</div>
+						</div>
+
+	<!-- Button-5 trigger modal MEDIA -->
+						<button type="button" class="btn btn-info mx-2" data-toggle="modal" data-target="#exampleModal">
+							Peste
+						</button>
+	<!-- Modal Button-5 MEDIA -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h2 class="modal-title" id="exampleModalLabel">Condimente</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+								<div class="modal-body">
+									<ol>
+										<li>Sare</li>
+										<li>Piper</li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ol>
+								</div>
+								<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+							</div>
+						</div>
+
+	<!-- Button-6 trigger modal MEDIA -->
+						<button type="button" class="btn btn-info mx-2" data-toggle="modal" data-target="#exampleModal">
+							Fructe de mare
+						</button>
+	<!-- Modal Button-6 MEDIA -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h2 class="modal-title" id="exampleModalLabel">Condimente</h2>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+								<div class="modal-body">
+									<ol>
+										<li>Sare</li>
+										<li>Piper</li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ol>
+								</div>
+								<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<!-- end Card Condimente MEDIA -->
+
+	<!-- blog feed -->
+	<!--Media size 'create post'-->
+			<div class="left-column col-lg-7 ">
+				<div class="d-lg-none mb-3">
+					<div class="card shadow p-4 mb-4 m-auto d-flex flex-column p-3">
+						<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="72" height="72">
+						<p class="lead">Acest blog s-a nascut din dorinta de a impartasii experientele noastre culinare cu cei care, asemeni noua se simt mereu incepatori in bucatarie. <br> Fiecare incepator are cel putin o reteta realizata cu succes, aici este locul unde poti impartasii marele tau mic succes.</p>
+						<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Scrie reteta ta</a></p>
+					</div>
+				</div>
+	<!-- end Media 'create post'-->
+
+				<!-- Blog posts-->
+				{% if blog_posts %}
+					{% for post in blog_posts %}
+						<div class="blog-post-container shadow p-4 mb-4  ">
+							{% include 'blog/snippets/blog_post_snippet.html' with blog_post=post %}
+						</div>
+					{% endfor %}
+				{% else %}
+					<div class="blog-post-container shadow p-4 mb-4 ">
+						{% include 'blog/snippets/blog_post_snippet.html' with query=query %}
+					</div>
+				{% endif %}
+				<!-- End Blog posts-->
+	<!-- Pagination -->
+				{% include 'blog/snippets/blog_post_pagination.html' with blog_post=blog_post %}
+			</div>
+	<!-- end blog feed -->
+	<!-- Right 'create post' column  -->
+				<div class="right-column col-lg-2 d-lg-flex d-none flex-column">
+					<div class="card2 shadow p-4 mb-4 create-post-bar d-flex flex-column p-3">
+						<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="172" height="172">
+						<p class="lead">&ensp;Acest blog s-a nascut din dorinta de a impartasii experientele noastre culinare cu cei care, asemeni noua se simt mereu incepatori in bucatarie. <br> &ensp;Fiecare incepator are cel putin o reteta realizata cu succes, aici este locul unde poti impartasii marele tau mic succes.</p>
+						<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Scrie reteta ta</a></p>
+					</div>
+				</div>
+	<!-- end Right 'create post' column  -->	
+		</div>
+	</div>
+</section>
 
 {% endblock content %}
