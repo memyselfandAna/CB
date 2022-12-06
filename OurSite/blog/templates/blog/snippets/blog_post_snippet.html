@@ -44,14 +44,16 @@
 				<a href="{% url 'blog:detail' post.slug %}">
 					<h2 class="card-title">{{blog_post.title}}</h2>
 				</a>
-				<p class="card-text">{{blog_post.body|safe|truncatechars:180}}</p>
+				<p class="card-text">{{blog_post.body|safe|truncatechars:150}}</p>
 				{% if blog_post.author == request.user %}
 					<a href="{% url 'blog:edit' blog_post.slug %}" class="btn btn-primary">Edit</a>
 					<a href="{% url 'blog:delete' blog_post.slug %}" class="btn btn-danger">Delete</a>
 				{% endif %}
 			</div>
 			<div class="card-footer text-muted">
-			  Updated on {{blog_post.date_updated}} by {{blog_post.author}}
+			  Updated on {{blog_post.date_updated}} 
+			  Posted on {{blog_post.date_published}} <br>
+			  by {{blog_post.author}}
 			</div>
 		</div>
 	</div>
