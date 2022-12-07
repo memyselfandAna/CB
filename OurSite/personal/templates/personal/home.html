@@ -91,7 +91,7 @@
 	}
 
 	.container2{
-		max-width: 45%;
+		max-width: 44%;
 		align-self: baseline;
 	}
 	
@@ -615,9 +615,9 @@
 				<div class="d-lg-none mb-3">
 					<div class="card shadow p-4 mb-4 m-auto d-flex flex-column p-3">
 						<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="72" height="72">
-						<p class="lead">Acest blog s-a nascut din dorinta de a impartasii experientele noastre culinare cu cei care, asemeni noua se simt mereu incepatori in bucatarie. <br> 
-							Fiecare incepator are cel putin o reteta realizata cu succes, aici este locul unde poti impartasii marele tau mic succes.</p>
-						<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Scrie reteta ta</a></p>
+						<p class="lead">Acest blog s-a nascut din dorinta de a impartasi experientele noastre culinare cu cei care, asemeni noua, se simt mereu incepatori in bucatarie. <br> 
+							Fiecare incepator are cel putin o reteta realizata cu succes, fiecare om are langa el un mic incepator alaturi de care a creat o reteta, aici este locul unde poti impartasii marele tau mic succes.</p>
+						<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Reteta ta aici</a></p>
 					</div>
 				</div>
 	<!-- end Media 'create post'-->
@@ -641,15 +641,16 @@
 	<!-- end blog feed -->
 	<!-- Right 'create post' column  -->
 				<div class="right-column col-lg-2 d-lg-flex d-none flex-column">
-					<div class="card2 shadow p-4 mb-4 create-post-bar d-flex flex-column p-3">
+					<div class="card2 shadow p-4 mb-4 mr-4 create-post-bar d-flex flex-column p-3">
 						<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="172" height="172">
-						<p class="lead">&ensp;Acest blog s-a nascut din dorinta de a impartasii experientele noastre culinare cu cei care, asemeni noua se simt mereu incepatori in bucatarie. <br> &ensp;Fiecare incepator are cel putin o reteta realizata cu succes, aici este locul unde poti impartasii marele tau mic succes.</p>
-						<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Scrie reteta ta</a></p>
+						<p class="lead">Acest blog s-a nascut din dorinta de a impartasi experientele noastre culinare cu cei care, asemeni noua, se simt mereu incepatori in bucatarie. <br> 
+							Fiecare incepator are cel putin o reteta realizata cu succes, fiecare om are langa el un mic incepator alaturi de care a creat o reteta, aici este locul unde poti impartasii marele tau mic succes.</p>
+						<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Reteta ta aici ✒️</a></p>
 					</div>
 				</div>
 	<!-- end Right 'create post' column  -->	
 		</div>
 	</div>
 </section>
-
 {% endblock content %}
+

@@ -31,7 +31,25 @@
         .main{
             min-height: 100vh;
             height: 100%;
+            padding-top: 11rem;
+    }
+
+        /* 
+        Disable horizontal scroll on mobile
+
+        html, body {
+            overflow-x: hidden;
+    }
+        body {
+            position: relative
+    } */
+        @media(max-height: 1100px){
+            .main{
+            min-height: 100vh;
+            height: 100%;
+            padding-top: 12rem;
         }
+    }
 
     </style>
     <div class="main">
@@ -45,4 +63,3 @@
 </body>
 
 </html>
-
