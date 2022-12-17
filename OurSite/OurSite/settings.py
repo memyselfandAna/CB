@@ -169,32 +169,54 @@ CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
         # 'skin': 'office2013',
-        'font_names': 'Casandra Personal Use;sans serif;monospace;cursive',
-        'contentsCss': ['https://fonts.cdnfonts.com/css/cassandra-personal-use'],
-        
         'toolbar_Basic': [
             ['Source', '-', 'Bold', 'Italic']
         ],
         'toolbar_YourCustomToolbarConfig': [
             {'name': 'basicstyles',
              'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
+            {'name': 'links', 'items': ['Link', 'Unlink']}, '/',
             {'name': 'paragraph',
              'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent',
                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ]},
-            {'name': 'links', 'items': ['Link', 'Unlink']},
+           
             {'name': 'insert', 'items': ['HorizontalRule', 'Smiley', 'SpecialChar']},
-            {'name': 'document', 'items': ['Print']},
-            '/',
+           
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
-            {'name': 'styles', 'items': ['Format', 'FontSize']},
+            {'name': 'styles', 'items': ['Format', 'FontSize']}, {'name': 'document', 'items': ['Print']},
+            '/',
             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
             {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
             
             '/',  # put this to force next toolbar on new line
-            # {'name': 'yourcustomtools', 'items': [
+            {'name': 'yourcustomtools', 'items': [
 
-            # ]},
-     
+            ]},
         ],
-    },
+        'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
+        # 'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
+        # 'height': 291,
+        # 'width': '100%',
+        # 'filebrowserWindowHeight': 725,
+        # 'filebrowserWindowWidth': 940,
+        # 'toolbarCanCollapse': True,
+        # 'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
+        'tabSpaces': 4,
+        'extraPlugins': ','.join([
+            'uploadimage', # the upload image feature
+            # your extra plugins here
+            'div',
+            'autolink',
+            'autoembed',
+            'embedsemantic',
+            'autogrow',
+            # 'devtools',
+            'widget',
+            'lineutils',
+            'clipboard',
+            'dialog',
+            'dialogui',
+            'elementspath'
+        ]),
+    }
 }

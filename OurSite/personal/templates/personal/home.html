@@ -7,7 +7,7 @@
 <style type="text/css">
 
 	@media (max-width: 1100px) { 
-		
+
 		.right-column{
 			margin-left: 0px;
 		}
@@ -17,9 +17,12 @@
 	}
 
 	@media (min-width: 667px) { 
-		
+
 		.right-column{
 			margin-left: 20px;
+		}
+		.row {
+    		flex-wrap: inherit;
 		}
 	}
 
@@ -44,6 +47,7 @@
 	.lead {
 		font-size: xx-large;	
 	}
+
 	span .btn:hover {
 		background: #03e9f4;
 		color: rgba(240,199, 200, 0.958); 
@@ -54,9 +58,11 @@
 					0 0 50px #03e9f4,
 					0 0 100px #03e9f4;
   	}
-	span .btn{
+
+	span .btn {
 		margin: 10px 0 10px ;
 	}
+
 	.section{
 		display:flex;
 		justify-content: center;
@@ -64,6 +70,7 @@
 		min-height: border-box;
 		min-width: auto;
 	}
+
 	.box{
 		display: flex;
 		justify-content: center;
@@ -71,6 +78,7 @@
 		padding: 0 20px;
 		margin-right: 40px;                     
 	}
+
 	.box h4{
 		writing-mode: vertical-lr;
 		text-orientation: upright;
@@ -85,16 +93,46 @@
 	.media-btn {
 		padding-left: 10vw;
 	}
-	.condimente-btn{
-		margin-right: 50%;
-		
+
+	.condimente-btn {
+		margin-right: 50%;	
 	}
 
-	.container2{
+	.container2 {
 		max-width: 44%;
 		align-self: baseline;
 	}
-	
+
+	/* .container {
+		max-width: 1000px;
+	} */
+
+	.on-top {
+    display: grid;
+    position: sticky;
+    text-align: center;
+    bottom: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #a1816c;
+    justify-content: end;
+    text-shadow: 1px 1px 2px #d555;
+	}
+
+	.top {
+		margin: initial;
+	}
+
+	.modal-dialog-scrollable .modal-body {
+		font-family: 'Eufoniem', sans-serif;
+		font-size: xx-large;
+	}
+
+	.card-body {
+		font-family: 'Eufoniem', sans-serif;
+		font-size: xx-large;
+	}
+
 </style>
 
 <section class="section">
@@ -112,7 +150,7 @@
 					</button>	
 		<!-- Modal Button-1 -->
 					<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-dialog modal-dialog-scrollable" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru legume</h5>
@@ -152,7 +190,7 @@
 					</button>				
 		<!-- Modal Button-2-->
 					<div class="modal fade" id="exampleModalCenter-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-dialog modal-dialog-scrollable" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Carne de Pui</h5>
@@ -191,7 +229,7 @@
 					</button>
 		<!-- Modal Button-3-->
 					<div class="modal fade" id="exampleModalCenter-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-dialog modal-dialog-scrollable" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Carne de Porc</h5>
@@ -232,7 +270,7 @@
 					</button>
 		<!-- Modal Button-4 -->
 					<div class="modal fade" id="exampleModalCenter-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-dialog modal-dialog-scrollable" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Carne de Vita</h5>
@@ -272,7 +310,7 @@
 					</button>
 		<!-- Modal Button-5 -->
 					<div class="modal fade" id="exampleModalCenter-4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-dialog modal-dialog-scrollable" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Peste</h5>
@@ -312,7 +350,7 @@
 					</button>
 		<!-- Modal Button-6 -->
 					<div class="modal fade" id="exampleModalCenter-5" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-						<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-dialog modal-dialog-scrollable" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLongTitle">Condimente pentru Fructe de mare</h5>
@@ -372,7 +410,7 @@
 					</button> 
 	<!-- Modal Button-1 MEDIA -->
 						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog" role="document">
+							<div class="modal-dialog modal-dialog-scrollable" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 								<h2 class="modal-title" id="exampleModalLabel">Condimente pentru Legume</h2>
@@ -411,7 +449,7 @@
 						</button>		  
 	<!-- Modal Button-2 MEDIA -->
 						<div class="modal fade" id="exampleModal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
+						<div class="modal-dialog modal-dialog-scrollable" role="document">
 							<div class="modal-content">
 							<div class="modal-header">
 								<h2 class="modal-title" id="exampleModalLabel">Condimente pentru Carnea de Pui</h2>
@@ -450,7 +488,7 @@
 						</button>
 	<!-- Modal Button-3 MEDIA -->
 						<div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog" role="document">
+							<div class="modal-dialog modal-dialog-scrollable" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 								<h2 class="modal-title" id="exampleModalLabel">Condimente pentru Carnea de Porc</h2>
@@ -491,7 +529,7 @@
 						</button>			
 	<!-- Modal Button-4 MEDIA -->
 						<div class="modal fade" id="exampleModal-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-						<div class="modal-dialog" role="document">
+						<div class="modal-dialog modal-dialog-scrollable" role="document">
 							<div class="modal-content">
 							<div class="modal-header">
 								<h2 class="modal-title" id="exampleModalLabel">Condimente pentru Carnea de Vita</h2>
@@ -531,7 +569,7 @@
 						</button>
 	<!-- Modal Button-5 MEDIA -->
 						<div class="modal fade" id="exampleModal-4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog" role="document">
+							<div class="modal-dialog modal-dialog-scrollable" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 								<h2 class="modal-title" id="exampleModalLabel">Condimente pentru Peste</h2>
@@ -571,7 +609,7 @@
 						</button>
 	<!-- Modal Button-6 MEDIA -->
 						<div class="modal fade" id="exampleModal-5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							<div class="modal-dialog" role="document">
+							<div class="modal-dialog modal-dialog-scrollable" role="document">
 							<div class="modal-content">
 								<div class="modal-header">
 								<h2 class="modal-title" id="exampleModalLabel">Condimente pentru Fructe de mare</h2>
@@ -617,7 +655,7 @@
 						<img class="img-fluid d-block m-auto pb-2" src="{% static 'logo.png' %}" width="72" height="72">
 						<p class="lead">Acest blog s-a nascut din dorinta de a impartasi experientele noastre culinare cu cei care, asemeni noua, se simt mereu incepatori in bucatarie. <br> 
 							Fiecare incepator are cel putin o reteta realizata cu succes, fiecare om are langa el un mic incepator alaturi de care a creat o reteta, aici este locul unde poti impartasii marele tau mic succes.</p>
-						<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Reteta ta aici</a></p>
+						<p class="m-auto"><a class="btn btn-primary" href="{% url 'blog:create' %}">Reteta ta aici ✒️</a></p>
 					</div>
 				</div>
 	<!-- end Media 'create post'-->
@@ -652,5 +690,13 @@
 		</div>
 	</div>
 </section>
+
+<div class="on-top">
+    <a href="#">
+      <p class="top">Top</p>
+	  <p class="hand"><i class="fa fa-hand-pointer" aria-hidden="true" style="color:#a1816c;"></i></p>
+    </a>
+  </div>
+
 {% endblock content %}
 

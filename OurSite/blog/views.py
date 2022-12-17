@@ -21,6 +21,8 @@ def create_blog_view(request):
 		obj.author = author
 		obj.save()
 		form = CreateBlogPostForm()
+		
+		return redirect("home")
 
 	context['form'] = form
 
@@ -67,36 +69,6 @@ def edit_blog_view(request, slug):
 
 	return render(request, 'blog/edit_blog.html', context)
 
-# def delete_blog_view(request, slug):
-    	
-# 	context = {}
-# 	user = request.user
-# 	if not user.is_authenticated:
-# 		return redirect('must_authenticate')
-
-# 	blog_post = get_object_or_404(BlogPost, slug=slug)
-
-# 	if blog_post.author != user:
-# 		return HttpResponse("You are not the author of that post.")
-
-# 	if request.method == 'GET':
-# 		blog_post.delete()
-# 		context['success_message'] = "Deleted"
-	
-# 	return render(request, 'blog/delete_blog.html', context)
-	
-
-def delete_blog_view(request, slug):
-    
-    context ={}
- 
-    obj = get_object_or_404(BlogPost, slug = slug)
- 
-    if request.method =="POST":
-        obj.delete()
-        return HttpResponseRedirect("/")
- 
-    return render(request, 'blog/delete_blog.html', context)
 
 def get_blog_queryset(query=None):
 	queryset = []
@@ -111,3 +83,15 @@ def get_blog_queryset(query=None):
 			queryset.append(post)
 
 	return list(set(queryset))
+
+def delete_blog_view(request, slug):
+
+    context ={}
+ 
+    obj = get_object_or_404(BlogPost, slug = slug)
+ 
+    if request.method =="POST":
+        obj.delete()
+        return HttpResponseRedirect("/")
+ 
+    return render(request, 'blog/delete_blog.html', context)
