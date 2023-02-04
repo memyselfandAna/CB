@@ -7,23 +7,24 @@
 <style type="text/css">
 
    .create-form {
-	    width: 100%;
-	    max-width: 100%;
+	    width: 63vw;
+	    max-width: 63vw;
 	    padding: 15px;
 	    margin: auto;
+		font-size: 3vw;
   	}
-
+	 
   	.submit-button {
   		max-width: 200px;
   	}
-
+	label {
+		font-size: 2rem !important;
+	}
 	.image {
 	  opacity: 1;
 	  transition: .5s ease;
 	  backface-visibility: hidden;
 	}
-
-	
 
 	.middle {
 	  transition: .5s ease;
@@ -71,6 +72,16 @@
 		border: 3px solid rgb(51, 179, 243) ;
 		margin: 0 auto;
 		border-radius: 1%;
+	}
+	#cke, input {
+		margin: 0 !important;
+		font-family: inherit !important;
+		font-size: inherit !important;
+		line-height: inherit !important;
+		background-color: transparent !important;
+		width: fit-content !important;
+		width: -webkit-fill-available !important;
+		border-color: #fef4ea !important;
 	}
 
 	.cke_top {
@@ -153,7 +164,7 @@
 				<!-- Submit $ Cencel btn -->
 				<center>
 				<span class="detail-blog-btn">
-					<button class="submit-button btn btn-lg btn-primary btn-block" type="submit">Save</button>
+					<button  class="submit-button btn btn-lg btn-primary btn-block" type="submit">Save</button>
 					<a href="/">
 					<button disabled="disabled" class="submit-button btn btn-lg btn-secondary btn-block">Cancel</button>
 					</a>

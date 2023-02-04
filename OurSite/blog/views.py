@@ -55,7 +55,7 @@ def edit_blog_view(request, slug):
 		if form.is_valid():
 			obj = form.save(commit=False)
 			obj.save()
-			context['success_message'] = "Updated"
+			context['success_message'] = " Reteta a fost actualizata cu succes! 😊"
 			blog_post = obj
 	
 	form = UpdateBlogPostForm(
@@ -63,7 +63,7 @@ def edit_blog_view(request, slug):
 					"title": blog_post.title, 
 					"body": blog_post.body,
 					"image": blog_post.image,
-				}
+				} 
 			)
 	context['form'] = form
 

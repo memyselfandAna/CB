@@ -1375,3 +1375,6 @@ OurSite/static_cdn/ckeditor/galleriffic/js/jquery.galleriffic.js
 OurSite/static_cdn/ckeditor/galleriffic/js/jquery.history.js
 OurSite/static_cdn/ckeditor/galleriffic/js/jquery.opacityrollover.js
 OurSite/static_cdn/ckeditor/galleriffic/js/jush.js
+OurSite/blog/__pycache__/forms.cpython-310.pyc
+OurSite/blog/__pycache__/models.cpython-310.pyc
+OurSite/blog/__pycache__/views.cpython-310.pyc

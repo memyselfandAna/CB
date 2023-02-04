@@ -148,22 +148,6 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'toolbar': 'Custom',
-#         'toolbar_Custom': [
-#             ['Bold', 'Italic', 'Underline'],
-#             ['RemoveFormat', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo',],
-#             ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-#             ['Link', 'Unlink'],
-#             ['TextColor','Format', 'Font', 'FontSize'],
-#             ['BGColor'],
-#             ['Smiley'],
-#             ['SpecialChar']
-
-#         ]
-#     }
-# }
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -180,7 +164,7 @@ CKEDITOR_CONFIGS = {
              'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent',
                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ]},
            
-            {'name': 'insert', 'items': ['HorizontalRule', 'Smiley', 'SpecialChar']},
+            {'name': 'insert', 'items': ['Smiley', 'SpecialChar']},
            
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
             {'name': 'styles', 'items': ['Format', 'FontSize']}, {'name': 'document', 'items': ['Print']},

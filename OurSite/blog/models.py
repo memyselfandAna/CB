@@ -6,6 +6,7 @@ from django.db.models.signals import post_delete
 from django.dispatch import receiver
 from ckeditor.fields import RichTextField
 
+
 def upload_location(instance, filename):
 	file_path = 'blog/{author_id}/{title}-{filename}'.format(
 				author_id=str(instance.author.id),title=str(instance.title), filename=filename)
@@ -14,8 +15,7 @@ def upload_location(instance, filename):
 
 class BlogPost(models.Model):
 	title 					= models.CharField(max_length=50, null=False, blank=False, unique=True)
-	# body 					= models.TextField(max_length=5000, null=False, blank=False)
-	body 					= RichTextField(blank=True, null=True)
+	body 					= RichTextField(blank=False, null=False)
 	image		 			= models.ImageField(upload_to=upload_location, null=False, blank=False)
 	date_published 			= models.DateTimeField(auto_now_add=True, verbose_name="date published")
 	date_updated 			= models.DateTimeField(auto_now=True, verbose_name="date updated")
