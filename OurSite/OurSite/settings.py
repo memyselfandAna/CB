@@ -29,39 +29,20 @@ SECRET_KEY = 'django-insecure-8ii=pblhj^l+&svxcj7f)7l$tbo^%uumrk%f!4z$o12v(!sp-u
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
 # ALLOWED_HOSTS (activat doar in PRODUCTIE!)
 
-ALLOWED_HOSTS = [    
-    'https://www.incepatoriinbucatarie.ro',
-    'https://incepatoriinbucatarie.ro', 
-    'http://www.incepatoriinbucatarie.ro',
-    'http://incepatoriinbucatarie.ro', 
-    'incepatoriinbucatarie.ro'
- ]
+ALLOWED_HOSTS = [
+    'https://cb-production.up.railway.app/',
+    'http://cb-production.up.railway.app/',
+    'cb-production.up.railway.app',
+    'www.incepatoriinbucatarie.ro', 
+    'incepatoriinbucatarie.ro',
+]
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development Only
 
-# corsheaders (activat doar in PRODUCTIE!)
-
-CORS_ALLOWED_ORIGINS = [
-    'https://www.incepatoriinbucatarie.ro',
-    'https://incepatoriinbucatarie.ro',
-    'http://www.incepatoriinbucatarie.ro',
-    'http://incepatoriinbucatarie.ro', 
-    'incepatoriinbucatarie.ro',
-    'www.incepatoriinbucatarie.ro',
-]
-# CSRF (activat doar in PRODUCTIE!)
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://www.incepatoriinbucatarie.ro',
-    'https://incepatoriinbucatarie.ro', 
-    'http://www.incepatoriinbucatarie.ro',
-    'http://incepatoriinbucatarie.ro', 
-    'www.incepatoriinbucatarie.ro', 
-    'incepatoriinbucatarie.ro',
-]
 
 # Application definition
 
@@ -72,6 +53,8 @@ INSTALLED_APPS = [
     'account',
     'blog',
     'ckeditor',
+    'corsheaders',
+    
     
     #django apps
     'django.contrib.admin',
@@ -83,6 +66,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -90,6 +75,18 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+# corsheaders (activat doar in PRODUCTIE!)
+
+CORS_ALLOWED_ORIGINS = [
+    'cb-production.up.railway.app', 
+    'https://cb-production.up.railway.app/', 
+    'http://cb-production.up.railway.app',
+    'https://www.incepatoriinbucatarie.ro',
+    'https://incepatoriinbucatarie.ro',
+    'incepatoriinbucatarie.ro',
+    'www.incepatoriinbucatarie.ro',
 ]
 
 ROOT_URLCONF = 'OurSite.urls'
@@ -113,6 +110,18 @@ TEMPLATES = [
 WSGI_APPLICATION = 'OurSite.wsgi.application'
 
 AUTH_USER_MODEL = 'account.Account'
+
+# CSRF (activat doar in PRODUCTIE!)
+
+CSRF_TRUSTED_ORIGINS = [
+    'cb-production.up.railway.app', 
+    'https://cb-production.up.railway.app/', 
+    'https://cb-production.up.railway.app',
+    'www.incepatoriinbucatarie.ro', 
+    'incepatoriinbucatarie.ro',
+    'https://www.incepatoriinbucatarie.ro',
+    'https://incepatoriinbucatarie.ro', 
+]
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -168,15 +177,12 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
-CKEDITOR_UPLOAD_PATH = 'uploads/'
-
 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -188,22 +194,20 @@ CKEDITOR_CONFIGS = {
         'toolbar_YourCustomToolbarConfig': [
             {'name': 'basicstyles',
              'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat']},
-            {'name': 'links', 'items': ['Link', 'Unlink']}, '/',
+            {'name': 'links', 'items': ['Link', 'Unlink']},
+            '/',
             {'name': 'paragraph',
              'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent',
                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ]},
-           
             {'name': 'insert', 'items': ['Smiley', 'SpecialChar']},
-           
             {'name': 'colors', 'items': ['TextColor', 'BGColor']},
-            {'name': 'styles', 'items': ['Format', 'FontSize']}, {'name': 'document', 'items': ['Print']},
+            {'name': 'styles', 'items': ['Format', 'FontSize']},
+            {'name': 'document', 'items': ['Print']},
             '/',
             {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
             {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
-            
             '/',  # put this to force next toolbar on new line
             {'name': 'yourcustomtools', 'items': [
-
             ]},
         ],
         'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
