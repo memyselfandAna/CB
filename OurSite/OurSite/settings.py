@@ -32,16 +32,36 @@ ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS (activat doar in PRODUCTIE!)
 
 ALLOWED_HOSTS = [    
-    'incepatoriinbucatarie.ro'
     'https://www.incepatoriinbucatarie.ro',
     'https://incepatoriinbucatarie.ro', 
     'http://www.incepatoriinbucatarie.ro',
     'http://incepatoriinbucatarie.ro', 
+    'incepatoriinbucatarie.ro'
  ]
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # During development Only
 
+# corsheaders (activat doar in PRODUCTIE!)
+
+CORS_ALLOWED_ORIGINS = [
+    'https://www.incepatoriinbucatarie.ro',
+    'https://incepatoriinbucatarie.ro',
+    'http://www.incepatoriinbucatarie.ro',
+    'http://incepatoriinbucatarie.ro', 
+    'incepatoriinbucatarie.ro',
+    'www.incepatoriinbucatarie.ro',
+]
+# CSRF (activat doar in PRODUCTIE!)
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://www.incepatoriinbucatarie.ro',
+    'https://incepatoriinbucatarie.ro', 
+    'http://www.incepatoriinbucatarie.ro',
+    'http://incepatoriinbucatarie.ro', 
+    'www.incepatoriinbucatarie.ro', 
+    'incepatoriinbucatarie.ro',
+]
 
 # Application definition
 
@@ -213,23 +233,3 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
-# corsheaders (activat doar in PRODUCTIE!)
-
-CORS_ALLOWED_ORIGINS = [
-    'https://www.incepatoriinbucatarie.ro',
-    'https://incepatoriinbucatarie.ro',
-    'http://www.incepatoriinbucatarie.ro',
-    'http://incepatoriinbucatarie.ro', 
-    'incepatoriinbucatarie.ro',
-    'www.incepatoriinbucatarie.ro',
-]
-# CSRF (activat doar in PRODUCTIE!)
-
-CSRF_TRUSTED_ORIGINS = [
-    'www.incepatoriinbucatarie.ro', 
-    'incepatoriinbucatarie.ro',
-    'https://www.incepatoriinbucatarie.ro',
-    'https://incepatoriinbucatarie.ro', 
-    'http://www.incepatoriinbucatarie.ro',
-    'http://incepatoriinbucatarie.ro', 
-]
