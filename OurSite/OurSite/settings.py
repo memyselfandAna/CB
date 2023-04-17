@@ -32,7 +32,11 @@ ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS (activat doar in PRODUCTIE!)
 
 ALLOWED_HOSTS = [    
-     'incepatoriinbucatarie.ro'
+    'incepatoriinbucatarie.ro'
+    'https://www.incepatoriinbucatarie.ro',
+    'https://incepatoriinbucatarie.ro', 
+    'http://www.incepatoriinbucatarie.ro',
+    'http://incepatoriinbucatarie.ro', 
  ]
 
 if DEBUG:
@@ -214,6 +218,8 @@ CKEDITOR_CONFIGS = {
 CORS_ALLOWED_ORIGINS = [
     'https://www.incepatoriinbucatarie.ro',
     'https://incepatoriinbucatarie.ro',
+    'http://www.incepatoriinbucatarie.ro',
+    'http://incepatoriinbucatarie.ro', 
     'incepatoriinbucatarie.ro',
     'www.incepatoriinbucatarie.ro',
 ]
@@ -224,4 +230,6 @@ CSRF_TRUSTED_ORIGINS = [
     'incepatoriinbucatarie.ro',
     'https://www.incepatoriinbucatarie.ro',
     'https://incepatoriinbucatarie.ro', 
+    'http://www.incepatoriinbucatarie.ro',
+    'http://incepatoriinbucatarie.ro', 
 ]
